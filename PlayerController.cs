@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     private float topPlayer = 5.0f;
     private float lowerPlayer = -10.0f;
+    
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, topPlayer);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Fire");
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
